@@ -1,0 +1,47 @@
+@"
+# PawCare - Veterinary Clinic Patient Management Database
+
+## Project
+
+PawCareDB is a SQL Server database for managing veterinary clinic clients, pets, veterinarians, bookings, treatments, invoices, and booking audit history.
+
+## Database Features
+
+- Clients
+- Pets
+- Veterinarians
+- Bookings
+- Treatments
+- Invoices
+- Invoice items
+- Booking audit trail
+- Stored procedures
+- Pet age function
+- Reporting views
+- Indexed view
+- Audit trigger
+- Automated tests
+
+## Project Files
+
+- schema.sql
+- procedures.sql
+- reporting.sql
+- audit_trigger.sql
+- seed.sql
+- reports.sql
+- tests/test_scheduling.sql
+- tests/test_treatments.sql
+- tests/test_reporting.sql
+
+## Automated Tests
+
+The tests use THROW 50900 for expected business-rule failures.
+
+Run all tests with:
+
+    sqlcmd -S localhost -d PawCareDB -E -b -i tests/run_all_tests.sql
+"@ | Set-Content README.md -Encoding UTF8
+
+git add README.md
+git commit -m "Add PawCare project documentation"
